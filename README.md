@@ -30,3 +30,5 @@ Si no existe, crear el archivo php.ini en /public y agregarle el siguiente conte
 
 `memory_limit = 15M`
 
+
+### Para crear un link simbólico a la carpeta de un plugin en desarrollo hay que crear un volumen a dicha carpeta y desde dentro del contenedor crear el symlink, ya que docker no reconoce los enlaces simbólicos creados desde el host
