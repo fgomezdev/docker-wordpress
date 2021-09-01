@@ -31,4 +31,20 @@ Si no existe, crear el archivo php.ini en /public y agregarle el siguiente conte
 `memory_limit = 15M`
 
 
-### Para crear un link simbólico a la carpeta de un plugin en desarrollo hay que crear un volumen a dicha carpeta y desde dentro del contenedor crear el symlink, ya que docker no reconoce los enlaces simbólicos creados desde el host
+## Para crear un link simbólico a la carpeta de un plugin en desarrollo hay que crear un volumen a dicha carpeta y desde dentro del contenedor crear el symlink, ya que docker no reconoce los enlaces simbólicos creados desde el host
+
+
+## Debug
+Si está activo el modo debug esta función sirve para volcar variables al archivo debug.log (guardarla en functions.php o en code snippets)
+
+//Si está activado el debug el resultado de esta función queda en wp-content/debug.log
+//var_to_file($variable);
+
+function var_to_file($data){
+	ob_start();
+	var_dump($data);
+	$contents = ob_get_contents();
+	ob_end_clean();
+	error_log($contents);
+}
+
