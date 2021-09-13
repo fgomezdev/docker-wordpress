@@ -48,7 +48,7 @@ function var_to_file($data){
 }
 ```
 
-##Instalar la librería int (para tener la función NumberFormatter entre otras) ejecutar en el contenedor:
+## Instalar la librería int (para tener la función NumberFormatter entre otras) ejecutar en el contenedor:
 ```
 sudo apt-get install libicu-dev
 docker-php-ext-install mysqli pdo pdo_mysql
