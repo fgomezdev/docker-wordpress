@@ -50,7 +50,10 @@ function var_to_file($data){
 
 ## Instalar la librería int (para tener la función NumberFormatter entre otras) ejecutar en el contenedor:
 ```
+docker exec -it {CONTAINER_ID} /bin/bash
 apt update && apt-get install libicu-dev -y && docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-configure intl && docker-php-ext-install intl
+
+docker-compose restart
 ```
 
 
